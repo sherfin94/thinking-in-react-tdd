@@ -1,0 +1,14 @@
+exports[`Product category row  matches snapshot  1`] = `
+<tr>
+  <td>
+     
+    FootBall
+     
+  </td>
+  <td>
+     
+    50
+     
+  </td>
+</tr>
+`;
