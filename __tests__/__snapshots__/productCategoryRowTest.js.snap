@@ -1,14 +1,9 @@
 exports[`Product category row  matches snapshot  1`] = `
-<tr>
+<th>
   <td>
      
-    FootBall
+    Electronics
      
   </td>
-  <td>
-     
-    50
-     
-  </td>
-</tr>
+</th>
 `;
