@@ -4,7 +4,7 @@ export default class SearchBar extends Component {
   render() {
     return(
       <form>
-        <input type = "textbox" ref="filterInput"/>
+        <input type = "textbox" ref="filterInput" value = {this.props.filterText}/>
       </form>
     )
   }
