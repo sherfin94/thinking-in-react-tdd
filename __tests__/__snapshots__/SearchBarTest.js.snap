@@ -1,0 +1,6 @@
+exports[`Search Bar snapshot 1`] = `
+<form>
+  <input
+    type="textbox" />
+</form>
+`;
