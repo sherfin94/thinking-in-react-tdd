@@ -3,7 +3,8 @@ import ProductTable from './ProductTable'
 import SearchBar from './SearchBar'
 
 var style = {
-  'float': 'left'
+  'float': 'left',
+  'border': 'solid gold 3px'
 }
 
 export default class FilterableProductTable extends Component {
