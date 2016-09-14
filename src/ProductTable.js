@@ -16,6 +16,7 @@ export default class ProductTable extends React.Component {
     this.props.products.forEach(function(product) {
       if(product.category != lastCategory) {
         rows.push(<ProductCategoryRow name = {product.category} key = {product.name + product.category}/>)
+        lastCategory = product.category;
       }
       rows.push(<ProductRow name = {product.name} price = {product.price} key = {product.name}/>)
     });
