@@ -12,6 +12,7 @@ export default class FilterableProductTable extends Component {
     this.state = {
       filterText: ''
     }
+    this.filteredProducts = this.filteredProducts.bind(this);
   }
 
   handleChange(filterText) {
@@ -20,11 +21,22 @@ export default class FilterableProductTable extends Component {
     });
   }
 
+  filteredProducts(filterText) {
+    var filteredProductArray = [];
+    this.props.products.forEach( (product) => {
+      if(product.name.indexOf(filterText) != -1) {
+        filteredProductArray.push(product)
+      }
+    });
+    console.log(filteredProductArray);
+    return filteredProductArray;
+  }
+
   render() {
       return(
         <div className = "FilterableProductTable" style={style}>
           <SearchBar filterText = {this.state.filterText} handleChange={this.handleChange.bind(this)}/>
-          <ProductTable products = {this.props.products}
+          <ProductTable products = {this.filteredProducts(this.state.filterText)}
             handleChange={this.handleChange.bind(this)}/>
         </div>
       )
