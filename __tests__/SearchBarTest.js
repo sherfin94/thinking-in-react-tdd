@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchBar from '../src/SearchBar';
 import renderer from 'react-test-renderer';
+//import { mount } from 'enzyme';
 
 describe("Search Bar", () => {
   it("snapshot", () => {
@@ -10,32 +11,8 @@ describe("Search Bar", () => {
     let json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
+
+  it(" handles onChange event", function() {
+    
+  })
 })
-
-
-/*
-
-import React from 'react'
-import ReactDOM  from 'react-dom'
-import ProductTable from '../src/ProductTable'
-import ProductRow from '../src/ProductTable'
-import {shallow} from 'enzyme'
-import TestUtils from 'react-addons-test-utils'
-import SearchBar from '../src/SearchBar'
-
-describe("Search Bar", () => {
-  it(" takes input and stores it in state variable", () => {
-    var searchBar = TestUtils.renderIntoDocument(
-      <SearchBar />
-    );
-
-    var searchBarNode = searchBar.refs.filterInput;
-    searchBarNode.value = "hello";
-
-    TestUtils.Simulate.change(searchBarNode);
-
-    console.log(searchBar);
-  });
-})
-
-*/

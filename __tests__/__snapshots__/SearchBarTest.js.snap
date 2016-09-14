@@ -1,6 +1,8 @@
 exports[`Search Bar snapshot 1`] = `
 <form>
   <input
-    type="textbox" />
+    onChange={[Function bound handleChange]}
+    type="textbox"
+    value={undefined} />
 </form>
 `;
